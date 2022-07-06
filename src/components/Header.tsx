@@ -1,11 +1,13 @@
 import Link from "next/link";
 import styled from "styled-components";
+import { ThemeToggle } from "./ThemeToggle";
 
 const StyledHeader = styled.header`
   background-color: var(--violet);
 
   .logo {
     margin-right: auto;
+    height: 2rem;
   }
 
   .theme-toggle {
@@ -42,7 +44,7 @@ export function Header() {
             <img src="/assets/desktop/logo.svg" alt="devjobs logo" />
           </a>
         </Link>
-        <div className="theme-toggle">toggle</div>
+        <ThemeToggle />
       </div>
     </StyledHeader>
   );
