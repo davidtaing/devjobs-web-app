@@ -25,3 +25,7 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.wrapper {
+  margin-inline: 1.5rem;
+}
