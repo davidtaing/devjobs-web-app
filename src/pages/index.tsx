@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
 import styles from "../../styles/Home.module.css";
+import { Header } from "../components/Header";
 
 const Home: NextPage = () => {
   return (
@@ -16,16 +16,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <h1>Heading 1</h1>
-        <h2>Heading 2</h2>
-        <h3>Heading 3</h3>
-        <h4>Heading 4</h4>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima illum,
-          cupiditate hic voluptatibus laudantium quam assumenda amet ratione
-          ipsum dolorum velit harum sapiente, exercitationem modi est doloremque
-          nisi officiis esse.
-        </p>
+        <Header />
       </main>
     </div>
   );
