@@ -14,10 +14,9 @@ const Home: NextPage = () => {
         />
         <link rel="icon" href="/favicon-32x32.png" />
       </Head>
+      <Header />
 
-      <main className={styles.main}>
-        <Header />
-      </main>
+      <main className={styles.main}></main>
     </div>
   );
 };
