@@ -27,6 +27,10 @@ a {
   box-sizing: border-box;
 }
 
+main {
+  margin-top: -2.5rem;
+}
+
 .wrapper {
   margin-inline: 1.5rem;
 }
