@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const StyledDiv = styled.div`
+const StyledDiv = styled.div<Pick<Props, "logoBackground">>`
   position: absolute;
   top: -25px;
   left: 2rem;
@@ -9,7 +9,7 @@ const StyledDiv = styled.div`
   align-items: center;
   justify-content: center;
 
-  background-color: black;
+  background-color: ${(props) => props.logoBackground};
   width: 50px;
   height: 50px;
   border-radius: 15px;
@@ -23,7 +23,7 @@ interface Props {
 
 export function JobCardLogo({ logo, company, logoBackground }: Props) {
   return (
-    <StyledDiv className="logo">
+    <StyledDiv className="logo" logoBackground={logoBackground}>
       <img src={logo} alt={company} />
     </StyledDiv>
   );
