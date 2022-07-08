@@ -1,3 +1,4 @@
+import { useCallback, useEffect, useState } from "react";
 import styled from "styled-components";
 
 const StyledDiv = styled.div`
@@ -69,11 +70,39 @@ const StyledDiv = styled.div`
 `;
 
 export function ThemeToggle() {
+  const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    const prefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
+
+    setDarkMode(prefersDark);
+    document.documentElement.setAttribute(
+      "color-theme",
+      prefersDark ? "dark" : "light"
+    );
+
+    console.log("initial load");
+
+    console.log(darkMode ? "dark" : "light");
+  }, []);
+
+  const handleChange = () => {
+    // React doesn't update state until after, so we need to invert darkMode
+    document.documentElement.setAttribute(
+      "color-theme",
+      !darkMode ? "dark" : "light"
+    );
+
+    setDarkMode(!darkMode);
+  };
+
   return (
     <StyledDiv className="theme-toggle">
       <img className="icon-sun" src="/assets/desktop/icon-sun.svg" />
       <label className="switch">
-        <input type="checkbox" />
+        <input type="checkbox" checked={darkMode} onChange={handleChange} />
         <span className="slider round" />
       </label>
       <img className="icon-moon" src="/assets/desktop/icon-moon.svg" />

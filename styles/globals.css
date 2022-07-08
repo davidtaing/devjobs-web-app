@@ -11,22 +11,17 @@
 
   --text-secondary: var(--dark-grey);
   --text-action: var(--violet);
+
+  /* Light Mode Colours */
+  --background: var(--light-grey);
+  --foreground: white;
+  --text-primary: var(--very-dark-blue);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --background: var(--light-grey);
-    --foreground: white;
-    --text-primary: var(--very-dark-blue);
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: var(--midnight);
-    --foreground: var(--very-dark-blue);
-    --text-primary: white;
-  }
+[color-theme="dark"] {
+  --background: var(--midnight);
+  --foreground: var(--very-dark-blue);
+  --text-primary: white;
 }
 
 html,
