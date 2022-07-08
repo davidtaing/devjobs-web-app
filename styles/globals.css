@@ -51,3 +51,5 @@ main {
     max-width: 1110px;
   }
 }
+
+@import url("./typography.css");
