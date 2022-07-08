@@ -18,9 +18,9 @@ const StyledDiv = styled.div`
       padding: 3.0625rem 0.5625rem 2rem 2rem;
       width: 100%;
       height: 100%;
-      line-height: 1;
 
       > * {
+        line-height: 1;
         margin: 0;
       }
 
@@ -40,11 +40,12 @@ const StyledDiv = styled.div`
   }
 
   .oval {
-    display: inline;
+    display: inline-block;
     margin-inline: 0.75rem;
-    width: 1rem;
-    height: 1rem;
+    width: 0.25rem;
+    height: 0.25rem;
     background-color: #6e8098;
+    border-radius: 100%;
   }
 `;
 
@@ -62,11 +63,11 @@ export function JobCard({ job }: Props) {
           logoBackground={job.logoBackground}
         />
         <div className="content">
-          <p className="information">
+          <div className="information">
             <span className="postedAt">{job.postedAt}</span>
-            <span className="oval" />
+            <div className="oval" />
             <span className="contract">{job.contract}</span>
-          </p>
+          </div>
           <h3 className="position">{job.position}</h3>
           <p className="company">{job.company}</p>
           <h4 className="location">{job.location}</h4>
