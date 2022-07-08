@@ -10,7 +10,7 @@ const StyledDiv = styled.div`
 
   .body {
     position: relative;
-    background-color: white;
+    background-color: var(--foreground);
     height: 228px;
     border-radius: 6px;
 
@@ -34,7 +34,7 @@ const StyledDiv = styled.div`
 
       .location {
         margin-top: 2.5rem;
-        color: var(--violet);
+        color: var(--text-action);
       }
     }
   }

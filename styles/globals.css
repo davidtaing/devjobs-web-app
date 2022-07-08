@@ -8,6 +8,25 @@
   --light-grey: #f4f6f8;
   --grey: #9daec2;
   --dark-grey: #6e8098;
+
+  --text-secondary: var(--dark-grey);
+  --text-action: var(--violet);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: var(--light-grey);
+    --foreground: white;
+    --text-primary: var(--very-dark-blue);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: var(--midnight);
+    --foreground: var(--very-dark-blue);
+    --text-primary: white;
+  }
 }
 
 html,
@@ -15,7 +34,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Kumbh Sans", sans-serif;
-  background-color: #f4f6f8;
+  background-color: var(--background);
 }
 
 a {

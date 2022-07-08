@@ -2,7 +2,7 @@ body {
   font-size: 1rem;
   line-height: 1.625rem;
   text-align: left;
-  color: var(--dark-grey);
+  color: var(--text-secondary);
 }
 
 h1,
@@ -11,7 +11,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--very-dark-blue);
+  color: var(--text-primary);
 }
 
 h1 {
