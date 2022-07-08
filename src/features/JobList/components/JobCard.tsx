@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Job } from "../types";
+import { JobCardLogo } from "./JobCardLogo";
 
 const StyledDiv = styled.div`
   display: block;
@@ -12,21 +13,6 @@ const StyledDiv = styled.div`
     background-color: white;
     height: 228px;
     border-radius: 6px;
-
-    .logo {
-      position: absolute;
-      top: -25px;
-      left: 2rem;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      background-color: black;
-      width: 50px;
-      height: 50px;
-      border-radius: 15px;
-    }
 
     .content {
       padding: 3.0625rem 0.5625rem 2rem 2rem;
@@ -70,9 +56,11 @@ export function JobCard({ job }: Props) {
   return (
     <StyledDiv className="job-card">
       <div className="body">
-        <div className="logo">
-          <img src={job.logo} alt={job.company} />
-        </div>
+        <JobCardLogo
+          logo={job.logo}
+          company={job.company}
+          logoBackground={job.logoBackground}
+        />
         <div className="content">
           <p className="information">
             <span className="postedAt">{job.postedAt}</span>
