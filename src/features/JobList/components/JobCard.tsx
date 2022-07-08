@@ -17,9 +17,14 @@ const StyledDiv = styled.div`
       position: absolute;
       top: -25px;
       left: 2rem;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background-color: black;
       width: 50px;
       height: 50px;
-      background-color: black;
       border-radius: 15px;
     }
 
