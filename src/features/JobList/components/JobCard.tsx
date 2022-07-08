@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Job } from "../types";
+import { CircleSeparator } from "./CircleSeparator";
 import { JobCardLogo } from "./JobCardLogo";
 
 const StyledDiv = styled.div`
@@ -38,15 +39,6 @@ const StyledDiv = styled.div`
       }
     }
   }
-
-  .oval {
-    display: inline-block;
-    margin-inline: 0.75rem;
-    width: 0.25rem;
-    height: 0.25rem;
-    background-color: #6e8098;
-    border-radius: 100%;
-  }
 `;
 
 interface Props {
@@ -65,7 +57,7 @@ export function JobCard({ job }: Props) {
         <div className="content">
           <div className="information">
             <span className="postedAt">{job.postedAt}</span>
-            <div className="oval" />
+            <CircleSeparator />
             <span className="contract">{job.contract}</span>
           </div>
           <h3 className="position">{job.position}</h3>
