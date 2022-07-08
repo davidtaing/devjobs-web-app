@@ -82,10 +82,6 @@ export function ThemeToggle() {
       "color-theme",
       prefersDark ? "dark" : "light"
     );
-
-    console.log("initial load");
-
-    console.log(darkMode ? "dark" : "light");
   }, []);
 
   const handleChange = () => {
