@@ -71,7 +71,7 @@ export function JobCard({ job }: Props) {
         <div className="content">
           <p className="information">
             <span className="postedAt">{job.postedAt}</span>
-            <div className="oval" />
+            <span className="oval" />
             <span className="contract">{job.contract}</span>
           </p>
           <h3 className="position">{job.position}</h3>
