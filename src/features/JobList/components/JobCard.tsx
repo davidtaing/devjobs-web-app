@@ -4,7 +4,7 @@ import { JobCardLogo } from "./JobCardLogo";
 
 const StyledDiv = styled.div`
   display: block;
-  margin: 1.5rem 0;
+  margin-top: 1.5rem;
   width: 100%;
   height: 253px;
 
