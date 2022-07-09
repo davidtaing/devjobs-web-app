@@ -9,6 +9,12 @@ const StyledDiv = styled.div`
   width: 100%;
   height: 253px;
 
+  :hover {
+    .position {
+      color: var(--text-secondary);
+    }
+  }
+
   .body {
     position: relative;
     background-color: var(--foreground);
@@ -26,6 +32,7 @@ const StyledDiv = styled.div`
       }
 
       .position {
+        transition: color 0.1s;
         margin-top: 1rem;
       }
 
