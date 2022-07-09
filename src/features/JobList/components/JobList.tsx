@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import data from "../../../data.json";
+import { useJobsContext } from "../../Jobs";
 import { JobCard } from "./JobCard";
 
 const StyledDiv = styled.div`
@@ -19,6 +19,8 @@ const StyledDiv = styled.div`
 `;
 
 export function JobList() {
+  const data = useJobsContext();
+
   return (
     <StyledDiv className="job-list wrapper">
       {data.map((job) => (

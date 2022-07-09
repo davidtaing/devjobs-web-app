@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Job } from "../types";
+import { Job } from "../../Jobs";
 import { CircleSeparator } from "./CircleSeparator";
 import { JobCardLogo } from "./JobCardLogo";
 
