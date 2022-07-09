@@ -1,13 +1,12 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import styles from "../../styles/Home.module.css";
 import { Header } from "../components/Header";
 import { JobList } from "../features/JobList/components/JobList";
 import { SearchBar } from "../components/SearchBar";
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>devjobs - Frontend Mentor Challenge</title>
         <meta
@@ -18,7 +17,7 @@ const Home: NextPage = () => {
       </Head>
       <Header />
 
-      <main className={styles.main}>
+      <main>
         <SearchBar />
         <JobList />
       </main>
