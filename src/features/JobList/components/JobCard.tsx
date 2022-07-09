@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import styled from "styled-components";
 import { Job } from "../../Jobs";
 import { CircleSeparator } from "./CircleSeparator";
@@ -53,8 +54,13 @@ interface Props {
 }
 
 export function JobCard({ job }: Props) {
+  const router = useRouter();
+  const handleClick = () => {
+    router.push(`/jobs/${job.id}`);
+  };
+
   return (
-    <StyledDiv className="job-card">
+    <StyledDiv className="job-card" onClick={handleClick}>
       <div className="body">
         <JobCardLogo
           logo={job.logo}
